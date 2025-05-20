@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Fit Zu Haus - Personal Training zuhause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .intro, .about, .benefits, .form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .about img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .benefit-box {
+            text-align: center;
+            padding: 1rem;
+        }
+        .benefit-box i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        .form-section h2 {
+            color: #2c3e50;
+        }
+        label {
+            display: block;
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+        .checkbox-container input {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2c3e50;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .container {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fit Zu Haus</h1>
+        <p>Individuelles Fitness-Coaching zuhause mit deinem Equipment</p>
+        <a href="#form-section"><button>Jetzt Umfrage ausfüllen!</button></a>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Willkommen zu deinem Fitness-Erfolg!</h2>
+            <p>Mit Fit Zu Haus trainierst du flexibel zuhause – ohne teures Equipment oder Fitnessstudio. Fülle unsere kurze Umfrage aus, um deinen persönlichen Trainingsplan zu starten!</p>
+            <p><strong>Angebot:</strong> Erhalte einen kostenlosen Trainings-Tipp nach Ausfüllen der Umfrage!</p>
+        </div>
+
+        <div class="about">
+            <h2>Über mich</h2>
+            <!-- Ersetze das Bild mit deinem eigenen, oder entferne es -->
+            <img src="https://via.placeholder.com/150" alt="Lasse Worring" />
+            <p>Hallo, ich bin Lasse, dein Personal Trainer! Mit meiner Erfahrung helfe ich dir, deine Fitnessziele zu erreichen – direkt bei dir zuhause, mit dem Equipment, das du schon hast. Lass uns gemeinsam deine Ziele erreichen!</p>
+        </div>
+
+        <div class="benefits">
+            <h2>Warum FitZuHaus?</h2>
+            <div class="benefit-box">
+                <i class="fas fa-home"></i>
+                <p>Trainiere bequem zuhause!</p>
+            </div>
+            <div class="benefit-box">
+                <i class="fas fa-dumbbell"></i>
+                <p>Nutze dein eigenes Equipment mit maximaler Effizienz!</p>
+            </div>
+            <div class="benefit-box">
+                <i class="fas fa-clock"></i>
+                <p>Flexible Trainingszeiten!</p>
+            </div>
+        </div>
+
+        <div class="form-section" id="form-section">
+            <h2>Deine Fitness-Umfrage</h2>
+            <form action="https://formspree.io/f/manokpzz" method="POST">
+                <label for="name">Name (optional):</label>
+                <input type="text" id="name" name="name" />
+
+                <label for="q1">1. Welche Fitnessziele möchten Sie in den nächsten 6 Monaten erreichen, und was hat Sie bisher daran gehindert?</label>
+                <textarea id="q1" name="q1" rows="4" required></textarea>
+
+                <label for="q2">2. Welches Equipment haben Sie zuhause, und wie sicher fühlen Sie sich bei der Nutzung?</label>
+                <textarea id="q2" name="q2" rows="4" required></textarea>
+
+                <label for="q3">3. Wie sieht Ihr Alltag aus, und wie viel Zeit können Sie realistisch für Ihr Training aufbringen?</label>
+                <textarea id="q3" name="q3" rows="4" required></textarea>
+
+                <label for="q4">4. Was war Ihre bisher beste Erfahrung mit Sport oder Fitness, und was hat Ihnen daran besonders gefallen?</label>
+                <textarea id="q4" name="q4" rows="4" required></textarea>
+
+                <label for="q5">5. Welche Unterstützung wünschen Sie sich am meisten von einem persönlichen Coach?</label>
+                <textarea id="q5" name="q5" rows="4" required></textarea>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="dsgvo" name="dsgvo" required />
+                    <label for="dsgvo">Ich stimme der <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a> zu.</label>
+                </div>
+
+                <button type="submit">Umfrage absenden</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Kontakt: info@FitZuHaus.de | <a href="/datenschutz.html" style="color: #3498db;">Datenschutz</a> | <a href="/impressum.html" style="color: #3498db;">Impressum</a></p>
+    </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            alert('Vielen Dank für Ihre Teilnahme! Wir melden uns bald.');
+        });
+    </script>
+</body>
+</html>
