@@ -1,186 +1,107 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>FitZuHaus - Personal Training zuhause</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .intro, .about, .benefits, .form-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .about img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        .benefit-box {
-            text-align: center;
-            padding: 1rem;
-        }
-        .benefit-box i {
-            font-size: 2rem;
-            color: #3498db;
-            margin-bottom: 0.5rem;
-        }
-        .form-section h2 {
-            color: #2c3e50;
-        }
-        label {
-            display: block;
-            margin: 0.5rem 0;
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-            margin: 1rem 0;
-        }
-        .checkbox-container input {
-            width: auto;
-            margin-right: 0.5rem;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #2c3e50;
-            color: white;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .container {
-                margin: 1rem;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitzuHaus - Personal Training zuhause</title>
+    <!-- Including Tailwind CSS from CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>FitZuHaus</h1>
-        <p>Individuelles Fitness-Coaching direkt zuhause mit deinem Equipment</p>
-        <a href="#form-section"><button>Jetzt Umfrage ausfüllen!</button></a>
+<body class="bg-gray-100 font-sans">
+    <!-- Header section with title and introduction -->
+    <header class="bg-blue-600 text-white text-center py-10">
+        <h1 class="text-4xl font-bold">FitzuHaus</h1>
+        <p class="mt-2 text-lg">Individuelles Fitness-Coaching direkt zuhause mit deinem Equipment</p>
+        <a href="#survey" class="mt-4 inline-block bg-yellow-400 text-blue-800 py-2 px-4 rounded hover:bg-yellow-500">Jetzt Umfrage ausfüllen!</a>
     </header>
 
-    <div class="container">
-        <div class="intro">
-            <h2>Willkommen zu deinem Fitness-Erfolg!</h2>
-            <p>Mit FitZuHaus trainierst du flexibel zuhause – mit eigenem Equipment oder auch ganz ohne! Fülle unsere kurze Umfrage aus, um deinen persönlichen Trainingsplan zu starten!</p>
-            <p><strong>Angebot:</strong> Erhalte einen kostenlosen Trainings-Tipp nach Ausfüllen der Umfrage!</p>
-        </div>
+    <!-- Main content section with welcome, about, why, and survey sections -->
+    <main class="max-w-4xl mx-auto p-6">
+        <!-- Welcome section -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600">Willkommen zu deinem Fitness-Erfolg!</h2>
+            <p class="mt-2 text-gray-700">Mit FitzuHaus trainierst du flexibel zuhause – mit eigenem Equipment oder auch ganz ohne! Fülle unsere kurze Umfrage aus, um deinen persönlichen Trainingsplan zu starten!</p>
+            <p class="mt-2 text-gray-700 font-semibold">Angebot: Erhalte einen kostenlosen Trainings-Tipp nach Ausfüllen der Umfrage!</p>
+        </section>
 
-        <div class="about">
-            <h2>Über mich</h2>
-            <p>Hallo, ich bin Lasse, dein persöhnlicher Trainer! Mit meiner Erfahrung helfe ich dir, deine Fitnessziele zu erreichen – direkt bei dir zuhause, mit dem Equipment, das du schon hast. Lass uns gemeinsam deine Ziele erreichen!</p>
-        </div>
+        <!-- About section -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600">Über mich</h2>
+            <p class="mt-2 text-gray-700">Hallo, ich bin dein persönlicher Trainer! Mit meiner Erfahrung helfe ich dir, deine Fitnessziele zu erreichen – direkt bei dir zuhause, mit dem Equipment, das du schon hast. Lass uns gemeinsam deine Ziele erreichen!</p>
+        </section>
 
-        <div class="benefits">
-            <h2>Warum FitZuHaus?</h2>
-            <div class="benefit-box">
-                <i class="fas fa-home"></i>
-                <p>Trainiere bequem zuhause!</p>
-            </div>
-            <div class="benefit-box">
-                <i class="fas fa-dumbbell"></i>
-                <p>Nutze dein eigenes Equipment mit maximaler Effizienz!</p>
-            </div>
-            <div class="benefit-box">
-                <i class="fas fa-clock"></i>
-                <p>Flexible Trainingszeiten!</p>
-            </div>
-        </div>
+        <!-- Why FitzuHaus section -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600">Warum FitzuHaus?</h2>
+            <ul class="mt-2 text-gray-700 list-disc list-inside">
+                <li>Trainiere bequem zuhause!</li>
+                <li>Nutze dein eigenes Equipment mit maximaler Effizienz!</li>
+                <li>Flexible Trainingszeiten!</li>
+            </ul>
+        </section>
 
-        <div class="form-section" id="form-section">
-            <h2>Deine Fitness-Umfrage</h2>
-            <form action="https://formspree.io/f/manokpzz" method="POST">
-                <label for="name">Name (optional):</label>
-                <input type="text" id="name" name="name" />
-
-                <label for="q1">1. Was sind Ihre Fitnessziele, die Sie in den nächsten 6 Monaten erreichen möchten und was hat Sie bisher daran gehindert? (z.B.: Muskelaufbau - Fettabbau / fehlende Motivation - fehlende Erfahrung?)</label>
-                <textarea id="q1" name="q1" rows="4" required></textarea>
-
-                <label for="q2">2. Welches Equipment haben Sie zuhause, und wie sicher fühlen Sie sich bei der Nutzung? (z.B.: Matte - Hanteln - bestimmte Maschinen - kleines Homegym)</label>
-                <textarea id="q2" name="q2" rows="4" required></textarea>
-
-                <label for="q3">3. Wie viel Zeit können Sie realistisch in einer durchschnittlichen Woche für Ihr Training aufbringen? (z.B.: 30 Min - 1 Std - 2 Std)</label>
-                <textarea id="q3" name="q3" rows="4" required></textarea>
-
-                <label for="q4">4. Wie Erfahren sind Sie mit Sport oder Fitness, und was gefällt Ihnene am meisten? (z.B.: sporadisches Training im Fitnessstudio - wöchentliches Yoga - wöchentliche Radtouren)</label>
-                <textarea id="q4" name="q4" rows="4" required></textarea>
-
-                <label for="q5">5. Welche Unterstützung wünschen Sie sich am meisten von einem persönlichen Trainer? (z.B.: Beibringen von richtiger Ausführung - Beibringen von Verletzungsrisiken)</label>
-                <textarea id="q5" name="q5" rows="4" required></textarea>
-
-                <div class="checkbox-container">
-                    <input type="checkbox" id="dsgvo" name="dsgvo" required />
-                    <label for="dsgvo">Ich stimme der <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a> zu.</label>
+        <!-- Survey form section -->
+        <section id="survey" class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold text-blue-600">Deine Fitness-Umfrage</h2>
+            <!-- Form for collecting user survey data -->
+            <div class="mt-4 space-y-4">
+                <!-- Name input field -->
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border rounded">
                 </div>
+                <!-- Email input field -->
+                <div>
+                    <label for="email" class="block text-gray-700 font-medium">E-Mail:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded">
+                </div>
+                <!-- Question 1: Fitness goals -->
+                <div>
+                    <label for="q1" class="block text-gray-700 font-medium">1. Was sind Ihre Fitnessziele, die Sie in den nächsten 6 Monaten erreichen möchten und was hat Sie bisher daran gehindert? (z.B.: Muskelaufbau, Fettabbau / fehlende Motivation, fehlende Erfahrung?)</label>
+                    <textarea id="q1" name="q1" rows="4" class="w-full p-2 border rounded"></textarea>
+                </div>
+                <!-- Question 2: Equipment -->
+                <div>
+                    <label for="q2" class="block text-gray-700 font-medium">2. Welches Equipment haben Sie zuhause, und wie sicher fühlen Sie sich bei der Nutzung? (z.B.: Matte, Hanteln, bestimmte Maschinen, kleines Homegym)</label>
+                    <textarea id="q2" name="q2" rows="4" class="w-full p-2 border rounded"></textarea>
+                </div>
+                <!-- Question 3: Time availability -->
+                <div>
+                    <label for="q3" class="block text-gray-700 font-medium">3. Wie viel Zeit können Sie realistisch in einer durchschnittlichen Woche für Ihr Training aufbringen? (z.B.: 30 Min, 1 Std, 2 Std)</label>
+                    <textarea id="q3" name="q3" rows="4" class="w-full p-2 border rounded"></textarea>
+                </div>
+                <!-- Question 4: Experience -->
+                <div>
+                    <label for="q4" class="block text-gray-700 font-medium">4. Wie erfahren sind Sie mit Sport oder Fitness, und was gefällt Ihnen am meisten? (z.B.: sporadisches Training im Fitnessstudio, wöchentliches Yoga, wöchentliche Radtouren)</label>
+                    <textarea id="q4" name="q4" rows="4" class="w-full p-2 border rounded"></textarea>
+                </div>
+                <!-- Question 5: Support needed -->
+                <div>
+                    <label for="q5" class="block text-gray-700 font-medium">5. Welche Unterstützung wünschen Sie sich am meisten von einem persönlichen Trainer? (z.B.: Beibringen von richtiger Ausführung, Beibringen von Verletzungsrisiken)</label>
+                    <textarea id="q5" name="q5" rows="4" class="w-full p-2 border rounded"></textarea>
+                </div>
+                <!-- Data privacy consent checkbox -->
+                <div>
+                    <label class="flex items-center text-gray-700">
+                        <input type="checkbox" name="privacy" class="mr-2">
+                        Ich stimme der Datenschutzerklärung zu.
+                    </label>
+                </div>
+                <!-- Submit button -->
+                <div>
+                    <button type="button" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Umfrage absenden</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                <button type="submit">Umfrage absenden</button>
-            </form>
-        </div>
-    </div>
-
-    <footer>
-        <p>Kontakt: info@FitZuHaus.de | <a href="/datenschutz.html" style="color: #3498db;">Datenschutz</a> | <a href="/impressum.html" style="color: #3498db;">Impressum</a></p>
+    <!-- Footer section with contact and legal links -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>Kontakt: <a href="mailto:info@FitzuHaus.de" class="underline">info@FitzuHaus.de</a></p>
+        <p class="mt-2">
+            <a href="#" class="underline mx-2">Datenschutz</a> |
+            <a href="#" class="underline mx-2">Impressum</a>
+        </p>
     </footer>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-            alert('Vielen Dank für Ihre Teilnahme! Wir melden uns bald.');
-        });
-    </script>
 </body>
 </html>
