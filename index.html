@@ -43,8 +43,8 @@
         <!-- Survey form section -->
         <section id="survey" class="bg-white rounded-lg shadow-md p-6">
             <h2 class="text-2xl font-semibold text-blue-600">Deine Fitness-Umfrage</h2>
-            <!-- Form for collecting user survey data -->
-            <div class="mt-4 space-y-4">
+            <!-- Form for collecting user survey data, sending to Formspree -->
+            <form id="surveyForm" action="https://formspree.io/f/mjkwznnr" method="POST" class="mt-4 space-y-4">
                 <!-- Name input field -->
                 <div>
                     <label for="name" class="block text-gray-700 font-medium">Name:</label>
@@ -83,15 +83,15 @@
                 <!-- Data privacy consent checkbox -->
                 <div>
                     <label class="flex items-center text-gray-700">
-                        <input type="checkbox" name="privacy" class="mr-2">
+                        <input type="checkbox" name="privacy" id="privacy" class="mr-2">
                         Ich stimme der Datenschutzerklärung zu.
                     </label>
                 </div>
                 <!-- Submit button -->
                 <div>
-                    <button type="button" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Umfrage absenden</button>
+                    <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Umfrage absenden</button>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
 
@@ -103,5 +103,22 @@
             <a href="#" class="underline mx-2">Impressum</a>
         </p>
     </footer>
+
+    <!-- JavaScript for client-side validation and submission feedback -->
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            const privacy = document.getElementById('privacy').checked;
+            
+            // Prevent submission if privacy checkbox is not checked
+            if (!privacy) {
+                event.preventDefault();
+                alert('Bitte stimme der Datenschutzerklärung zu.');
+                return;
+            }
+
+            // Optional: Show success message before Formspree submission
+            alert('Vielen Dank! Deine Umfrage wird gesendet.');
+        });
+    </script>
 </body>
 </html>
